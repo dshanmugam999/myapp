@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hellow-deployment
+  name: myreactapp1
   labels:
-    app: hellow
+    app: react
 spec:
   selector:
     matchLabels:
-      app: hellow
+      app: react
   template:
     metadata:
       labels:
-        app: hellow
+        app: react
     spec:
       containers:
-      - name: hello-web
+      - name: my-react-app-1
         image: hello-app:latest
 # Use the localhost:32000 path to use image from registry service
-# e.g.  image: localhost:32000/hello-app:v3
+# e.g.  image: localhost:32000/my-react-app-1:v3
         ports:
         - containerPort: 8080
